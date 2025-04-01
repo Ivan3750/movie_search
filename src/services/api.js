@@ -1,7 +1,7 @@
 // api.js
-const API_KEY = "your_api_key_here";
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
-
+console.log(API_KEY)
 export async function getTrendingMovies() {
   const response = await fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}`);
   const data = await response.json();
