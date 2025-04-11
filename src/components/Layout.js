@@ -3,12 +3,20 @@ import { Outlet, Link } from "react-router-dom";
 
 function Layout() {
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/movies">Movies</Link>
+    <>
+      <header>
+
+      <nav className="details-nav">
+        <Link to="/" className="nav-link">Home</Link>
+        <span className="nav-separator">|</span>
+        <Link to="/movies" className="nav-link">Movies</Link>
       </nav>
+      </header>
+      <main>
       <Outlet />
-    </div>
+      </main>
+      <footer></footer>
+    </>
   );
 }
 

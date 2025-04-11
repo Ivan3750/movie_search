@@ -11,7 +11,7 @@ function Cast() {
   }, [movieId]);
 
   return (
-    <ul>
+    <ul className="list">
       {cast.map(actor => (
         <li key={actor.id}>{actor.name}</li>
       ))}

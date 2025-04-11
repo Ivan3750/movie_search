@@ -12,9 +12,9 @@ function Home() {
 
   return (
     <div>
-      <h1>Trending Movies</h1>
+      <h1 className="title">Trending Movies</h1>
       {movies ? (
-        <ul>
+        <ul className="list">
           {movies.map(movie => (
             <li key={movie.id}>
               <Link to={`/movies/${movie.id}`}>{movie.title}</Link>

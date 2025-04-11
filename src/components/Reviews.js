@@ -12,7 +12,7 @@ function Reviews() {
   }, [movieId]);
 
   return (
-    <ul>
+    <ul className="list">
       {reviews.length > 0 ? (
         reviews.map(review => (
           <li key={review.id}>

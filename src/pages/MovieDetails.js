@@ -1,4 +1,3 @@
-// MovieDetails Component
 import { useParams, Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getMovieDetails } from "../services/api";
@@ -11,14 +10,16 @@ function MovieDetails() {
     getMovieDetails(movieId).then(setMovie);
   }, [movieId]);
 
-  if (!movie) return <p>Loading...</p>;
+  if (!movie) return <p className="loading">Loading...</p>;
 
   return (
-    <div>
-      <h1>{movie.title}</h1>
-      <p>{movie.overview}</p>
-      <nav>
-        <Link to="cast">Cast</Link> | <Link to="reviews">Reviews</Link>
+    <div className="details-container">
+      <h1 className="movie-title">{movie.title}</h1>
+      <p className="movie-overview">{movie.overview}</p>
+      <nav className="details-nav">
+        <Link to="cast" className="nav-link">Cast</Link>
+        <span className="nav-separator">|</span>
+        <Link to="reviews" className="nav-link">Reviews</Link>
       </nav>
       <Outlet />
     </div>

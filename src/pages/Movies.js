@@ -13,14 +13,21 @@ function Movies() {
   };
 
   return (
-    <div>
-      <h1>Search Movies</h1>
-      <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
-      <button onClick={handleSearch}>Search</button>
-      <ul>
+    <div className="movies-container">
+      <h1 className="movies-title">Search Movies</h1>
+      <div className="search-box">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="search-input"
+        />
+        <button onClick={handleSearch} className="search-button">Search</button>
+      </div>
+      <ul className="list">
         {movies.map(movie => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+          <li key={movie.id} className="list-item">
+            <Link to={`/movies/${movie.id}`} className="movie-link">{movie.title}</Link>
           </li>
         ))}
       </ul>
