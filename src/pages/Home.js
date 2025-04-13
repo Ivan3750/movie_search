@@ -12,7 +12,7 @@ function Home() {
 
   return (
     <div>
-      <h1 className="title">Trending Movies</h1>
+      <h1 className="title">Trending Movies 2025</h1>
       {movies ? (
         <ul className="list">
           {movies.map(movie => (
