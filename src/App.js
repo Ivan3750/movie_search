@@ -9,7 +9,7 @@ import Reviews from "./components/Reviews";
 import "./App.css"
 function App() {
   return (
-    <Router>
+    <Router basename="/movie_search">
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Layout />}>

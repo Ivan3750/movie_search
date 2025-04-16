@@ -1,7 +1,7 @@
 {
   "name": "movie_search",
   "version": "0.1.0",
-  "homepage": "https://Ivan3750.github.io/movie_search",
+  "homepage": "https://ivan3750.github.io/movie_search",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "netlify deploy -p",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
